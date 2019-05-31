@@ -34,7 +34,7 @@ server.use(bodyParse.urlencoded({//处理post请求
 
 //启用cors跨域,只允许http://127.0.0.1:3000的请求访问该服务端
 server.use(cors({
-    "origin":["http://127.0.0.1:8080","http://localhost:8080"],
+    "origin":["http://127.0.0.1:8080","http://127.0.0.1:5500"],
     credentials:true//
 }))
 
