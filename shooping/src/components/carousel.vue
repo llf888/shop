@@ -77,7 +77,7 @@ export default {
         
     },
     created(){
-        this.axios.get("http://127.0.0.1:3000/bcarousel").then(res=>{
+        this.axios.get("bcarousel").then(res=>{
             this.pics=res.data.data
         });
         this.timer=setInterval(()=>{

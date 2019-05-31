@@ -11,8 +11,8 @@
             </div>
         </div>
     <!-- 内容 -->
-        <div class="content">
-            <div class="inner">
+        <div class="content" :style="{background:'url('+require('../../public/img/login/timg.jpg')+')'}">
+            <div class="inner" :style="{background:'url('+require('../../public/img/login/xmad_15519596908221_Eclrq.jpg')+')'}">
                 <div class="box">
                     <div class="tou">
                         <span @click="zhang">账号登录</span>
@@ -75,6 +75,7 @@
 export default {
     data(){
         return{
+           
             tishi:false,
             tishi2:false,
             zh:"",
@@ -88,7 +89,7 @@ export default {
         login(){//登录按钮点击事件post请求带参数列表
             if(this.zh && this.mm){
                 
-                var url="http://127.0.0.1:3000/login"
+                var url="login"
                 var formdata="name="+this.zh+"&pwd="+this.mm
                 this.axios.post(url,formdata).then(res=>{
                        if(res.data.code==1){
@@ -189,15 +190,13 @@ export default {
     }
 /*内容 */
     .content{
-        background:url("/img/login/timg.jpg");
+       
         background-size:400px 550px;
     }
     .inner{
         width:1300px;
         margin:auto;
         height:550px;
-        background:url("/img/login/xmad_15519596908221_Eclrq.jpg");
-        background-size:1300px 550px;
     }
     .box{
         width:400px;

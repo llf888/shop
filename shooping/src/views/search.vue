@@ -107,7 +107,7 @@ export default {
         }
     },
     created(){     
-        this.axios.get('http://127.0.0.1:3000/soso?str='+sessionStorage.getItem('content')).then((res)=>{
+        this.axios.get('soso?str='+sessionStorage.getItem('content')).then((res)=>{
             this.totalpage=res.data.pageCount
             if(res.data.code==1){
                 var arr1=[]  
@@ -143,7 +143,7 @@ export default {
             this.$refs.bod[this.page-2].style="border:2px solid #ff7600"
             this.page-=1
             if(this.page<1)this.page=1
-            this.axios.get('http://127.0.0.1:3000/soso?str='+sessionStorage.getItem('content')+"&pno="+(this.page)).then((res)=>{
+            this.axios.get('soso?str='+sessionStorage.getItem('content')+"&pno="+(this.page)).then((res)=>{
                 for(var key of res.data.data){
                     var fn=key.imgs.split(',')
                     var arr=[]
@@ -163,7 +163,7 @@ export default {
             this.$refs.bod[i].style="border:2px solid #ff7600"
             if(i!==this.page-1){ //避免点击相同页码重复发送请求
                 this.page=i+1
-             this.axios.get('http://127.0.0.1:3000/soso?str='+sessionStorage.getItem('content')+"&pno="+this.page).then((res)=>{
+             this.axios.get('soso?str='+sessionStorage.getItem('content')+"&pno="+this.page).then((res)=>{
                 for(var key of res.data.data){
                     var fn=key.imgs.split(',')
                     var arr=[]
@@ -183,7 +183,7 @@ export default {
             }
             this.$refs.bod[this.page].style="border:2px solid #ff7600"
             this.page+=1
-            this.axios.get('http://127.0.0.1:3000/soso?str='+sessionStorage.getItem('content')+"&pno="+(this.page)).then((res)=>{
+            this.axios.get('soso?str='+sessionStorage.getItem('content')+"&pno="+(this.page)).then((res)=>{
                 
                 if(res.data.code==1){
                      for(var key of res.data.data){

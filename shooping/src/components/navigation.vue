@@ -212,7 +212,7 @@ export default {
     changeCar1(){
       this.img="img/lun bo/692a6c3b0a93a24f74a29c0f9d68ec71.png"
         if(this.names!='登录'){
-            this.axios.get('http://127.0.0.1:3000/cart?uid='+this.$store.getters.getUid).then(res=>{
+            this.axios.get('cart?uid='+this.$store.getters.getUid).then(res=>{
               if(res.data.code==1){
                   this.carche=true
                   this.carche0=false
@@ -300,7 +300,7 @@ export default {
      this.zhuce="退出"
      this.sign_in="login"
       
-      this.axios.get('http://127.0.0.1:3000/cart?uid='+this.$store.getters.getUid).then(res=>{
+      this.axios.get('cart?uid='+this.$store.getters.getUid).then(res=>{
         if(res.data.code==1){
           this.count=res.data.data.length
         }else{

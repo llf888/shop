@@ -52,7 +52,7 @@ export default {
             },
             lists:[
             {"title":"家电",
-                "imgb":"/img/jia dian/xmad_15539285884923_daZYV.jpg",
+                "imgb":"img/jia dian/xmad_15539285884923_daZYV.jpg",
                  "list":[
                     {"href":"javascript:;","name":"热门"},
                     {"href":"javascript:;","name":"电视"},
@@ -111,7 +111,7 @@ export default {
                     },
                          
                 {"title":"智能",
-                "imgb":"/img/zhi neng/xmad_15517943282724_lhogK.jpg",
+                "imgb":"img/zhi neng/xmad_15517943282724_lhogK.jpg",
                  "list":[
                     {"href":"javascript:;","name":"热门"},
                     {"href":"javascript:;","name":"出行"},
@@ -181,7 +181,7 @@ export default {
                     ]} ,
                                 
                 {"title":"搭配",
-                "imgb":"/img/da pei/xmad_1554365372105_AducK.jpg",
+                "imgb":"img/da pei/xmad_1554365372105_AducK.jpg",
                  "list":[
                     {"href":"javascript:;","name":"热门"},
                     {"href":"javascript:;","name":"耳机音箱"},
@@ -240,7 +240,7 @@ export default {
                     ]},
 
             {"title":"配件",
-                "imgb":"/img/pei jian/xmad_15555525132688_BwGQj.jpg",
+                "imgb":"img/pei jian/xmad_15555525132688_BwGQj.jpg",
                  "list":[
                     {"href":"javascript:;","name":"热门"},
                     {"href":"javascript:;","name":"保护套"},
@@ -298,7 +298,7 @@ export default {
 
                     ],},
                  {"title":"周边",
-                "imgb":"/img/zhou bian/",
+                "imgb":"img/zhou bian/",
                  "list":[
                     {"href":"javascript:;","name":"热门"},
                     {"href":"javascript:;","name":"出行"},

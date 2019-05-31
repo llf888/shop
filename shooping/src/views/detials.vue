@@ -151,12 +151,12 @@ export default {
     },
     created(){
         window.addEventListener('scroll',this.handleScroll) //添加滚动监听事件
-        this.axios.get("http://127.0.0.1:3000/products1?name=山竹7").then(res=>{
+        this.axios.get("products1?name=山竹7").then(res=>{
            this.product_list=res.data.data
            this.bgimg=res.data.data[0].img2
         })
         
-        this.axios.get('http://127.0.0.1:3000/products2').then(res=>{
+        this.axios.get('products2').then(res=>{
             this.detitems=res.data.data
         })
     },

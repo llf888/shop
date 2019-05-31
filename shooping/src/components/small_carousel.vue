@@ -48,7 +48,7 @@ export default {
         }
     },
     created(){
-         this.axios.get("http://127.0.0.1:3000/carousel?start=1&count=3").then(result=>{
+         this.axios.get("carousel?start=1&count=3").then(result=>{
             this.lists.push(result.data.data)
           
          })     

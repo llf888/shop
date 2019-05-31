@@ -182,7 +182,7 @@ export default {
         },
         loginon(){ //最终注册
             if(this.sign_name!=="" && this.sign_name_num==1 && this.sign_pwd!=="" && this.sign_pwd==this.sign_pwd1){
-                var url="http://127.0.0.1:3000/sign_in"
+                var url="sign_in"
                 var formdata="name="+this.sign_name+"&pwd="+this.sign_pwd+"&phone="+this.phone
                 //保存用户名密码
                 var ming=this.sign_name
@@ -199,7 +199,7 @@ export default {
                             type: 'success'
                             });
                         setTimeout(()=>{
-                            var url="http://127.0.0.1:3000/login";
+                            var url="login";
                             var formdata="name="+ming+"&pwd="+mima;
                             this.axios.post(url,formdata).then(res=>{
                             if(res.data.code==1){
@@ -242,7 +242,7 @@ export default {
                 this.f5=true
                 return
             }else{
-                var url="http://127.0.0.1:3000/search"
+                var url="search"
                var formdata="name="+this.sign_name
                 this.axios.post(url,formdata).then(res=>{
                     var code=res.data.code

@@ -138,7 +138,7 @@ export default {
         this.shopzhuce="退出"
         this.shopsign_in="login" 
 
-        this.axios.get('http://127.0.0.1:3000/cart?uid='+this.$store.getters.getUid).then(res=>{
+        this.axios.get('cart?uid='+this.$store.getters.getUid).then(res=>{
                 if(res.data.code==1){
                     this.shopproducts=1
                     this.shoplist=res.data.data 
@@ -151,7 +151,7 @@ export default {
             this.shoplogin='login'
             this.shopsign_in='sign_in'
         }
-        this.axios.get('http://127.0.0.1:3000/commend').then(res=>{
+        this.axios.get('commend').then(res=>{
             this.shoplists=res.data.data
         })
     },
@@ -211,7 +211,7 @@ export default {
           var img=parent.children[0].src
           var pname=parent.children[1].innerHTML
           var price=parent.children[2].innerHTML
-          var url='http://127.0.0.1:3000/addcart'
+          var url='addcart'
           var formdata='pname='+pname+'&price='+price+'&img='+img+'&uid='+this.$store.getters.getUid
           this.axios.post(url,formdata).then(res=>{
               if(res.data.code==1){
@@ -220,7 +220,7 @@ export default {
                     type: 'success',
                     duration:5000
                   })
-                this.axios.get('http://127.0.0.1:3000/cart?uid='+this.$store.getters.getUid).then(res=>{
+                this.axios.get('cart?uid='+this.$store.getters.getUid).then(res=>{
                     if(res.data.code==1){
                         this.shopproducts=1
                         this.shoplist=res.data.data 
@@ -237,9 +237,9 @@ export default {
         },
         addone(e){//点击+号时触发
             var pid=e.target.dataset.id
-            this.axios.get('http://127.0.0.1:3000/addone?pid='+pid).then(res=>{
+            this.axios.get('addone?pid='+pid).then(res=>{
                 if(res.data.code==1){
-                    this.axios.get('http://127.0.0.1:3000/addcha?pid='+pid).then(res=>{
+                    this.axios.get('addcha?pid='+pid).then(res=>{
                         if(res.data.code==1){
                             var addcha=res.data.data
                             for(var key of this.shoplist){
@@ -256,8 +256,8 @@ export default {
         },
         subone(e){ //点击-号时触发
             var pid=e.target.dataset.id
-                this.axios.get('http://127.0.0.1:3000/subone?pid='+pid).then(res=>{
-                    this.axios.get('http://127.0.0.1:3000/subcha?pid='+pid).then(res=>{
+                this.axios.get('subone?pid='+pid).then(res=>{
+                    this.axios.get('subcha?pid='+pid).then(res=>{
                         if(res.data.code==1){
                             var subcha=res.data.data
                             for(var key of this.shoplist){
@@ -273,13 +273,13 @@ export default {
         del(e){ //删除购物车商品
            var pid=e.target.dataset.id
            this.$confirm("确定删除该商品?").then(()=>{
-                this.axios.get('http://127.0.0.1:3000/del?pid='+pid).then(res=>{
+                this.axios.get('del?pid='+pid).then(res=>{
                     if(res.data.code==1){
                         this.$message({
                             type:'success',
                             message:'删除成功'
                         })
-                        this.axios.get('http://127.0.0.1:3000/cart?uid='+this.$store.getters.getUid).then(res=>{
+                        this.axios.get('cart?uid='+this.$store.getters.getUid).then(res=>{
                                 if(res.data.code==1){
                                     this.shopproducts=1
                                     this.shoplist=res.data.data 

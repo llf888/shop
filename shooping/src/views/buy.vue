@@ -81,7 +81,7 @@
                     <p>选择意外保险</p>
                     <div class="baoxian">
                         <input type="checkbox"  v-model="chek0" @click="changecheks">
-                        <img src="http://127.0.0.1:3000/img/buy/pms_1550560290.8631216.jpg" alt="">
+                        <img src="img/buy/pms_1550560290.8631216.jpg" alt="">
                         <div>
                             <span><input type="checkbox" v-model="chek1" @click="weixiu0">意外保障服务 <span>299元</span></span>
                             <span><input type="checkbox" v-model="chek2" @click="weixiu1">手机意外碎屏/进水/碾压等损坏 <span>159元</span></span>
@@ -130,10 +130,10 @@ export default {
             chek3:false,
             fixed:'',
            color0:[],
-           buyimg:"http://127.0.0.1:3000/img/buy/pms_1550642242.36585125.jpg",
-           color1:[{color:"purple",zi:"全息幻彩紫",border:"#ff7600",img:"http://127.0.0.1:3000/img/buy/pms_1550642242.36585125.jpg"},{color:"#45f",zi:"全息幻彩蓝",border:"#ccc",img:"http://127.0.0.1:3000/img/buy/pms_1550642240.48638886.jpg"},{color:"gray",zi:"深空灰",border:"#ccc",img:"http://127.0.0.1:3000/img/buy/pms_1550642238.19945420.jpg"}],
-           color2:[{color:"black",zi:"透明版",border:"#ff7600",img:'http://127.0.0.1:3000/img/buy/pms_1553001921.97126644.jpg'}],
-           banben:[{size:"8GB+128GB",price:"3299",border:"#ff7600",img:"http://127.0.0.1:3000/img/buy/pms_1550642242.36585125.jpg"},{size:"8GB+256GB",price:"3699",border:"#ccc",img:'http://127.0.0.1:3000/img/buy/pms_1553001921.97126644.jpg'},{size:"6GB+128GB",price:"2399",border:"#ccc",img:"http://127.0.0.1:3000/img/buy/pms_1550642242.36585125.jpg"}],
+           buyimg:"img/buy/pms_1550642242.36585125.jpg",
+           color1:[{color:"purple",zi:"全息幻彩紫",border:"#ff7600",img:"img/buy/pms_1550642242.36585125.jpg"},{color:"#45f",zi:"全息幻彩蓝",border:"#ccc",img:"img/buy/pms_1550642240.48638886.jpg"},{color:"gray",zi:"深空灰",border:"#ccc",img:"img/buy/pms_1550642238.19945420.jpg"}],
+           color2:[{color:"black",zi:"透明版",border:"#ff7600",img:'img/buy/pms_1553001921.97126644.jpg'}],
+           banben:[{size:"8GB+128GB",price:"3299",border:"#ff7600",img:"img/buy/pms_1550642242.36585125.jpg"},{size:"8GB+256GB",price:"3699",border:"#ccc",img:'img/buy/pms_1553001921.97126644.jpg'},{size:"6GB+128GB",price:"2399",border:"#ccc",img:"img/buy/pms_1550642242.36585125.jpg"}],
            xz:[],
            sheng:["河北","山西","河南","山东","上海","浙江","西藏"],
            tihuan:[],
@@ -202,7 +202,7 @@ export default {
             var price=this.huizong[0].price
             var img=this.buyimg
             var uid=this.$store.getters.getUid
-            var url='http://127.0.0.1:3000/addcart'
+            var url='addcart'
             var formdata='pname='+pname+'&price='+price+'&img='+img+'&uid='+uid
                 this.axios.post(url,formdata).then(res=>{
                     if(res.data.code){
